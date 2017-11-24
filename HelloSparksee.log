@@ -1,0 +1,30 @@
+2017-11-23 18:04:34.763|SPARKSEE[INFO] ** START ** 2017-11-23 18:04:34.763 Software version: 5.2.3
+2017-11-23 18:04:34.763|SPARKSEE[INFO] No license code
+2017-11-23 18:11:07.775|SPARKSEE[INFO] ** START ** 2017-11-23 18:11:07.775 Software version: 5.2.3
+2017-11-23 18:11:07.775|SPARKSEE[INFO] No license code
+2017-11-23 18:11:07.829|SPARKSEE[INFO] GraphPool 'HelloSparksee' has been created at HelloSparksee.gdb
+2017-11-23 18:11:08.021|GraphPool[INFO] Closed HelloSparksee.gdb
+2017-11-23 18:11:08.022|GraphPool[WARNING] Removed HelloSparksee.gdb.tmp
+2017-11-23 18:11:08.022|SPARKSEE[INFO] ** SHUTDOWN ** 2017-11-23 18:11:08.022
+2017-11-24 09:15:23.004|SPARKSEE[INFO] ** START ** 2017-11-24 09:15:23.004 Software version: 5.2.3
+2017-11-24 09:15:23.004|SPARKSEE[INFO] No license code
+2017-11-24 09:46:06.744|SPARKSEE[INFO] ** START ** 2017-11-24 09:46:06.744 Software version: 5.2.3
+2017-11-24 09:46:06.744|SPARKSEE[INFO] No license code
+2017-11-24 09:46:06.857|SPARKSEE[INFO] GraphPool 'HelloSparksee' has been created at HelloSparksee.gdb
+2017-11-24 09:46:06.981|GraphPool[INFO] Closed HelloSparksee.gdb
+2017-11-24 09:46:06.982|GraphPool[WARNING] Removed HelloSparksee.gdb.tmp
+2017-11-24 09:46:06.982|SPARKSEE[INFO] ** SHUTDOWN ** 2017-11-24 09:46:06.982
+2017-11-24 09:46:51.168|SPARKSEE[INFO] ** START ** 2017-11-24 09:46:51.168 Software version: 5.2.3
+2017-11-24 09:46:51.168|SPARKSEE[INFO] No license code
+2017-11-24 09:46:51.169|GraphPool[SEVERE] Error creating the file "C://HelloSparksee2.gdb".
+2017-11-24 09:46:51.236|SPARKSEE[INFO] ** SHUTDOWN ** 2017-11-24 09:46:51.236
+2017-11-24 09:47:18.647|SPARKSEE[INFO] ** START ** 2017-11-24 09:47:18.647 Software version: 5.2.3
+2017-11-24 09:47:18.647|SPARKSEE[INFO] No license code
+2017-11-24 09:47:18.647|GraphPool[SEVERE] Error creating the file "C:\HelloSparksee2.gdb".
+2017-11-24 09:47:18.649|SPARKSEE[INFO] ** SHUTDOWN ** 2017-11-24 09:47:18.649
+2017-11-24 09:49:03.754|SPARKSEE[INFO] ** START ** 2017-11-24 09:49:03.753 Software version: 5.2.3
+2017-11-24 09:49:03.754|SPARKSEE[INFO] No license code
+2017-11-24 09:49:03.852|SPARKSEE[INFO] GraphPool 'HelloSparksee' has been created at C:\bdDePruebaSparksee\HelloSparksee2.gdb
+2017-11-24 09:49:04.005|GraphPool[INFO] Closed C:\bdDePruebaSparksee\HelloSparksee2.gdb
+2017-11-24 09:49:04.006|GraphPool[WARNING] Removed C:\bdDePruebaSparksee\HelloSparksee2.gdb.tmp
+2017-11-24 09:49:04.006|SPARKSEE[INFO] ** SHUTDOWN ** 2017-11-24 09:49:04.006
