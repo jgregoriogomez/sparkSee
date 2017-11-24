@@ -9,12 +9,15 @@ import com.sparsity.sparksee.gdb.Attribute;
 import com.sparsity.sparksee.gdb.AttributeKind;
 import com.sparsity.sparksee.gdb.AttributeList;
 import com.sparsity.sparksee.gdb.AttributeListIterator;
+import com.sparsity.sparksee.gdb.Condition;
 import com.sparsity.sparksee.gdb.DataType;
 import com.sparsity.sparksee.gdb.Database;
 import com.sparsity.sparksee.gdb.Graph;
+import com.sparsity.sparksee.gdb.Objects;
 import com.sparsity.sparksee.gdb.Session;
 import com.sparsity.sparksee.gdb.Sparksee;
 import com.sparsity.sparksee.gdb.SparkseeConfig;
+import com.sparsity.sparksee.gdb.TextStream;
 import com.sparsity.sparksee.gdb.Type;
 import com.sparsity.sparksee.gdb.TypeList;
 import com.sparsity.sparksee.gdb.TypeListIterator;
@@ -46,6 +49,8 @@ public class SparkseeTest {
 	        long people1 = graph.newNode(peopleTypeId);
 	        long people2 = graph.newNode(peopleTypeId);
 	        long friend1 = graph.newEdge(friendTypeId, people1, people2);
+	        String str1 = "This is the first chunk of the text stream";
+	        String str2 = "This is the second chunk of the text stream";
 	        
 	        int nameAttrId = graph.findAttribute(peopleTypeId, "Name");
 	        if (Attribute.InvalidAttribute == nameAttrId)
@@ -56,6 +61,35 @@ public class SparkseeTest {
 	        Value v = new Value();
 	        graph.setAttribute(people1, nameAttrId, v.setString("Scarlett Johansson"));
 	        graph.setAttribute(people2, nameAttrId, v.setString("Woody Allen"));
+
+	        /*int textAttrId = graph.findAttribute(peopleTypeId, "text");
+	        if (Attribute.InvalidAttribute == textAttrId)
+	        {
+	        	textAttrId = graph.newAttribute(peopleTypeId, "Text", DataType.String, AttributeKind.Basic);
+	        }
+	        TextStream tstrm = new TextStream(false);
+	        graph.setAttributeText(people1, textAttrId, tstrm);
+	        char[] buff = str1.toCharArray();
+	        tstrm.write(buff, buff.length);
+	        buff = str2.toCharArray();
+	        tstrm.write(buff, buff.length);
+	        tstrm.close();*/
+	        
+	       
+	
+	        // retrieve all 'people' node objects
+	        Objects peopleObjs1 = graph.select(peopleTypeId);
+	      
+	        // retrieve Scarlett Johansson from the graph, which is a "PEOPLE" node
+	        Objects peopleObjs2 = graph.select(nameAttrId, Condition.Equal, v.setString("Scarlett Johansson"));
+	       
+	        // retrieve all 'PEOPLE' node objects having "Allen" in the name. It would retrieve
+	        // Woody Allen, Tim Allen or Allen Leech, or other similar if they are present in the graph. 
+	        Objects peopleObjs3 = graph.select(nameAttrId, Condition.Like, v.setString("Allen"));
+	        
+	        peopleObjs1.close();
+	        peopleObjs2.close();
+	        peopleObjs3.close();
 	        
 	        peopleTypeId = graph.findType("people");
 	        if (Type.InvalidType == peopleTypeId)
